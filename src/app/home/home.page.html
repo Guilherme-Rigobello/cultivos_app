@@ -1,20 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> AC1 </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item>
+      <ion-label>Temperatura 1.º  mês: {{ temp1 }}°C</ion-label>
+    </ion-item>
+    <ion-range min="-10" max="45" [(ngModel)]="temp1"></ion-range>
+
+    <ion-item>
+      <ion-label>Temperatura 2.º mês: {{ temp2 }}°C</ion-label>
+    </ion-item>
+    <ion-range min="-10" max="45" [(ngModel)]="temp2"></ion-range>
+
+    <ion-item>
+      <ion-label>Temperatura 3.º mês: {{ temp3 }}°C</ion-label>
+    </ion-item>
+    <ion-range min="-10" max="45" [(ngModel)]="temp3"></ion-range>
+
+    <ion-item>
+      <ion-label>Temperatura 4.º mês: {{ temp4 }}°C</ion-label>
+    </ion-item>
+    <ion-range min="-10" max="45" [(ngModel)]="temp4"></ion-range>
+
+    <ion-button expand="full" (click)="verificarCulturas()"
+      >Ver culturas ideais</ion-button
+    >
   </div>
 </ion-content>

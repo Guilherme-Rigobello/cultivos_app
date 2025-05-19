@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'tela-culturas/:media',
+    loadChildren: () => import('./tela-culturas/tela-culturas.module').then( m => m.TelaCulturasPageModule)
+  },
 ];
 
 @NgModule({
