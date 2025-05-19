@@ -11,9 +11,12 @@
     </ion-toolbar>
   </ion-header>
 
+
+
   <div id="container">
+    <h2>Indicador de Culturas:</h2>
     <ion-item>
-      <ion-label>Temperatura 1.º  mês: {{ temp1 }}°C</ion-label>
+      <ion-label>Temperatura 1.º mês: {{ temp1 }}°C</ion-label>
     </ion-item>
     <ion-range min="-10" max="45" [(ngModel)]="temp1"></ion-range>
 
@@ -32,8 +35,6 @@
     </ion-item>
     <ion-range min="-10" max="45" [(ngModel)]="temp4"></ion-range>
 
-    <ion-button expand="full" (click)="verificarCulturas()"
-      >Ver culturas ideais</ion-button
-    >
+    <ion-button expand="full" (click)="verificarCulturas()">Ver culturas ideais</ion-button>
   </div>
 </ion-content>

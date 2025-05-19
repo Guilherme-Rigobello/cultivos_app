@@ -23,13 +23,13 @@ export class TelaCulturasPage implements OnInit {
     { nome: 'Cana-de-açúcar', min: 20, max: 35 },
   ];
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.media = this.activatedRoute.snapshot.paramMap.get('media');
     const resultadoDiv = document.getElementById('resultado');
     if (!resultadoDiv) return;
-    
+
     resultadoDiv.innerHTML = '';
     let encontrou = false;
 
@@ -40,13 +40,15 @@ export class TelaCulturasPage implements OnInit {
         item.textContent = cultura.nome;
         resultadoDiv.appendChild(item);
         encontrou = true;
+
       }
     }
 
     if (!encontrou) {
       const item = document.createElement('p');
-      item.textContent = 'Nenhuma cultura é recomendada para essa média.';
+      item.textContent = 'Não há cultura para essa média...';
       resultadoDiv.appendChild(item);
+
     }
   }
 
